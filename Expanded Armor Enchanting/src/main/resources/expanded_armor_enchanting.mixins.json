@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "com.smushytaco.expanded_armor_enchanting.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "ProtectionTypesCanBeMixed"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
