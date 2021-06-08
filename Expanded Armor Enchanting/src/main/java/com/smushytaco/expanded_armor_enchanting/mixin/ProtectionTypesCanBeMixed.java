@@ -15,8 +15,7 @@ public abstract class ProtectionTypesCanBeMixed {
     public ProtectionEnchantment.Type protectionType;
     @Inject(method = "canAccept", at = @At("HEAD"), cancellable = true)
     private void hookCanAccept(Enchantment other, CallbackInfoReturnable<Boolean> cir) {
-        if (!ExpandedArmorEnchanting.INSTANCE.getConfig().getCanMixDifferentProtectionTypes() || !(other instanceof ProtectionEnchantment)) return;
-        ProtectionEnchantment protectionEnchantment = (ProtectionEnchantment) other;
+        if (!ExpandedArmorEnchanting.INSTANCE.getConfig().getCanMixDifferentProtectionTypes() || !(other instanceof ProtectionEnchantment protectionEnchantment)) return;
         if (protectionType != protectionEnchantment.protectionType) cir.setReturnValue(true);
     }
 }
